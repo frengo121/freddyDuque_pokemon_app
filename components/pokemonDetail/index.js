@@ -46,8 +46,10 @@ const PokemonDetailScreen = ({ id }) => {
               <View style={styles.itemContainer}>
                 <Text style={styles.titleText}>Types</Text>
                 <View style={styles.typeContainer}>
-                  {pokemons[0].types.map((type) => (
-                    <Text style={styles.typeText}>{type.type.name}</Text>
+                  {pokemons[0].types.map((type, index) => (
+                    <Text style={styles.typeText} key={index}>
+                      {type.type.name}
+                    </Text>
                   ))}
                 </View>
               </View>
@@ -77,8 +79,10 @@ const PokemonDetailScreen = ({ id }) => {
               <View style={styles.itemContainer}>
                 <Text style={styles.titleText}>Movimientos</Text>
                 <ScrollView horizontal={true} style={styles.movesContainer}>
-                  {pokemons[0].moves.map((move) => (
-                    <Text style={styles.moveText}>{move.move.name}</Text>
+                  {pokemons[0].moves.map((move, index) => (
+                    <Text style={styles.moveText} key={index}>
+                      {move.move.name}
+                    </Text>
                   ))}
                 </ScrollView>
               </View>

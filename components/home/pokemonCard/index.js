@@ -41,13 +41,18 @@ const PokemonCard = ({ pokemon }) => {
 
   return (
     <View
+      testID="pokemon-card"
       style={{
         ...styles.container,
         backgroundColor: COLORS[bgColor]?.bg || "#ffffff",
         borderColor: COLORS[bgColor]?.border || "#cccccc",
       }}
     >
-      <Image style={styles.image} source={{ uri: sprites.front_default }} />
+      <Image
+        testID="pokemon-image"
+        style={styles.image}
+        source={{ uri: sprites.front_default }}
+      />
       <Text style={styles.id}># {id}</Text>
       <Text style={styles.name}>{name}</Text>
     </View>

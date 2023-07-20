@@ -7,6 +7,7 @@ const Searcher = ({ searchTerm, handleChange }) => {
     <View style={styles.container}>
       <SearchIcon />
       <TextInput
+        testID="searchInput"
         style={styles.input}
         onChangeText={handleChange}
         value={searchTerm}
